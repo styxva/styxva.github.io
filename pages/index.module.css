@@ -3,17 +3,17 @@
   display: inline-block;
   border-radius: 100%;
   background: linear-gradient(to bottom right, #B57453, #B55B53);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid var(--color-border);
 }
 
 .pfp .ring {
-  background: rgba(0,0,0,0.1);
+  background: var(--color-border);
   border-radius: 100%;
   padding: 1px;
 }
 
 .pfp .inner {
-  background: #fff;
+  background: var(--color-bg-primary);
   border-radius: 100%;
   padding: 3px;
 }
@@ -22,4 +22,5 @@
   width: 170px;
   border-radius: 100%;
   display: block;
+  mix-blend-mode: multiply;
 }

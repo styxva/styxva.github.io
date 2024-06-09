@@ -1,5 +1,47 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --color-bg-primary: rgb(251, 243, 229);
+  --color-bg-secondary: rgb(244, 230, 230);
+  --color-fg-primary: rgb(24, 17, 17);
+  --color-fg-secondary: rgba(24, 17, 17, 0.5);
+  --color-container: rgb(255, 255, 255);
+  --color-border: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-fg-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }

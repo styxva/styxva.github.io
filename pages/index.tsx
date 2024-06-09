@@ -1,5 +1,5 @@
-import Head from "next/head";
-import styles from "./index.module.css";
+import Head from "next/head"
+import styles from "./index.module.css"
 import commonStyles from "@/styles/common.module.css"
 
 export default function Home() {
@@ -18,7 +18,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <h1>Hi, I'm styx!</h1>
       </main>
     </>
-  );
+  )
 }
