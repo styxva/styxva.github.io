@@ -1,0 +1,25 @@
+.pfp {
+  padding: 3px;
+  display: inline-block;
+  border-radius: 100%;
+  background: linear-gradient(to bottom right, #B57453, #B55B53);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.pfp .ring {
+  background: rgba(0,0,0,0.1);
+  border-radius: 100%;
+  padding: 1px;
+}
+
+.pfp .inner {
+  background: #fff;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.pfp img {
+  width: 170px;
+  border-radius: 100%;
+  display: block;
+}
