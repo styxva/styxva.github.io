@@ -1,4 +1,4 @@
-import styles from "./profilepicture.module.css"
+import styles from "./profile-picture.module.css"
 
 type Props = {
   size: number,
@@ -10,7 +10,7 @@ export default function ProfilePicture({ size, border, inset }: Props) {
   return (
     <div className={styles.outer} style={{ padding: border - 2 }}>
       <div className={styles.innerOutline}>
-        <div className={styles.innerCutout} style={{ padding: inset }}>
+        <div className={`${styles.innerCutout} bgComplementary`} style={{ padding: inset }}>
           <img className={styles.image} src="/pfp.png" alt="Profile Picture" width={size} />
         </div>
       </div>

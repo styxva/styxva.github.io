@@ -1,0 +1,39 @@
+.bg {
+  padding: 48px 24px;
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.copyright,
+.nav a {
+  text-decoration: none;
+  color: var(--color-fg-secondary);
+  transition: color 0.1s;
+}
+
+.nav a:hover {
+  color: var(--color-fg-primary);
+}
+
+.copyright {
+  flex-grow: 1;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media(max-width: 788px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

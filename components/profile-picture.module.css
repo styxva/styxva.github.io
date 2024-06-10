@@ -12,7 +12,6 @@
 }
 
 .innerCutout {
-  background: var(--color-bg-primary);
   border-radius: 100%;
 }
 

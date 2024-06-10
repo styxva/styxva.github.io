@@ -1,0 +1,39 @@
+.button {
+  padding: 0 24px;
+  text-decoration: none;
+  min-width: 40px;
+  min-height: 40px;
+  background: var(--color-fg-primary);
+  clip-path: inset(0 0 0 0 round 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+}
+
+.button::before {
+  content: '';
+  background: var(--color-accent);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  border-radius: 40px;
+  transition: 0.15s;
+  z-index: -100;
+}
+
+.button:hover::before {
+  top: 0;
+  bottom: 0;
+}
+
+.button.compact {
+  padding: 0;
+}
+
+.button.compact svg {
+  font-size: 20px;
+}

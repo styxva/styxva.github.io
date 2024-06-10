@@ -1,17 +1,13 @@
 .bg {
   min-height: 100vh;
-  padding: 24px;
-}
-
-.bg:nth-child(even) {
-  background: var(--color-bg-secondary);
-}
-
-.bg:nth-child(odd) {
-  background: var(--color-bg-primary);
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  max-width: 740px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--content-width);
 }

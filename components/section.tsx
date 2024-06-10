@@ -3,11 +3,12 @@ import styles from "./section.module.css"
 
 type Props = {
   children: ReactNode,
+  id: string,
 }
 
-export default function Section({ children }: Props) {
+export default function Section({ children, id }: Props) {
   return (
-    <section className={styles.bg}>
+    <section className={styles.bg} id={id}>
       <div className={styles.container}>
         {children}
       </div>
