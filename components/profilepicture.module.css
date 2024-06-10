@@ -1,0 +1,23 @@
+.outer {
+  display: inline-block;
+  border-radius: 100%;
+  background: linear-gradient(to bottom right, #B57453, #B55B53);
+  border: 1px solid var(--color-border);
+}
+
+.innerOutline {
+  background: var(--color-border);
+  border-radius: 100%;
+  padding: 1px;
+}
+
+.innerCutout {
+  background: var(--color-bg-primary);
+  border-radius: 100%;
+}
+
+.image {
+  border-radius: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+}

@@ -1,0 +1,17 @@
+.bg {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.bg:nth-child(even) {
+  background: var(--color-bg-secondary);
+}
+
+.bg:nth-child(odd) {
+  background: var(--color-bg-primary);
+}
+
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+}

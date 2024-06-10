@@ -1,4 +1,6 @@
 import Head from "next/head"
+import ProfilePicture from "@/components/profilepicture"
+import Section from "@/components/section"
 import styles from "./index.module.css"
 import commonStyles from "@/styles/common.module.css"
 
@@ -10,17 +12,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main>
-        <div className={styles.pfp}>
-          <div className={styles.ring}>
-            <div className={styles.inner}>
-              <img src="/pfp.png" alt="Profile Picture" />
-            </div>
-          </div>
-        </div>
+      <Section>
+        <ProfilePicture size={170} border={5} inset={3} />
 
         <h1>Hi, I'm styx!</h1>
-      </main>
+      </Section>
+
+      <Section>
+        <h1>Open for Commissions</h1>
+      </Section>
     </>
   )
 }
