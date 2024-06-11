@@ -1,0 +1,75 @@
+.landingPage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+}
+
+.landingPage .intro {
+  flex-grow: 1;
+}
+
+.landingPage .intro h1 {
+  text-align: left;
+}
+
+.landingPage .cta {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.landingPage .social {
+  flex-grow: 1;
+}
+
+.landingPage .social,
+.landingPage .buttons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.contact {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.contact span {
+  font-size: 13px;
+  color: var(--color-fg-secondary);
+}
+
+.contact .buttons {
+  gap: 12px;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 788px) {
+  .landingPage {
+    flex-direction: column;
+  }
+
+  .landingPage .intro h1 {
+    text-align: center;
+  }
+
+  .landingPage .cta {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .contact .buttons {
+    flex-direction: column;
+  }
+}

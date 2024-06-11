@@ -28,8 +28,9 @@ body {
   --color-bg-secondary: rgb(244, 230, 230);
   --color-fg-primary: rgb(24, 17, 17);
   --color-fg-secondary: rgba(24, 17, 17, 0.5);
+  --color-container-primary: rgb(255, 255, 255);
+  --color-container-secondary: rgb(245, 245, 245);
   --color-accent: rgb(152, 112, 112);
-  --color-container: rgb(255, 255, 255);
   --color-border: rgba(0, 0, 0, 0.15);
   --content-width: 740px;
 }
@@ -45,11 +46,14 @@ body {
 
 p {
   margin: 12px 0;
+  text-align: justify;
 }
 
 a {
   text-underline-offset: 0.2em;
   transition: text-underline-offset 0.1s;
+  color: inherit;
+  outline: none;
 }
 
 a:hover {

@@ -37,3 +37,12 @@
 .button.compact svg {
   font-size: 20px;
 }
+
+.button.inverted {
+  background: var(--color-container-primary);
+  color: var(--color-fg-primary);
+}
+
+.button.inverted::before {
+  background: var(--color-container-secondary);
+}
