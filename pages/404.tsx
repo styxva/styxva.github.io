@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Section from "@/components/section"
 import Footer from "@/components/footer"
+import HomeLink from "@/components/home-link"
 
 export default function NotFound() {
   return (
@@ -11,6 +12,8 @@ export default function NotFound() {
       </Head>
 
       <Section id="error">
+        <HomeLink />
+
         <h1>Page Not Found</h1>
       </Section>
 
@@ -18,4 +21,3 @@ export default function NotFound() {
     </>
   )
 }
-

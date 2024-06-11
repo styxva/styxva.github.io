@@ -4,8 +4,8 @@ import Section from "@/components/section"
 import Footer from "@/components/footer"
 import Button from "@/components/button"
 import CopyableText from "@/components/copyable-text"
-import styles from "./index.module.css"
 import ProfilePicture from "@/components/profile-picture"
+import styles from "./index.module.css"
 
 export default function Home() {
   return (

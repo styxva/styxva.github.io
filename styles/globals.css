@@ -69,13 +69,31 @@ h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   text-align: center;
-  margin: 0;
+  margin-bottom: 12px;
   margin-top: 24px;
 }
 
 h1 {
   font-size: 40px;
   line-height: 48px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 36px;
+  height: 1px;
+  background: var(--color-fg-primary);
 }
 
 section:nth-child(even),

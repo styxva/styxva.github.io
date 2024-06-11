@@ -1,0 +1,12 @@
+.link {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Playfair Display';
+  text-decoration: none;
+  font-size: 20px;
+}

@@ -10,7 +10,9 @@ export default function Section({ children, id }: Props) {
   return (
     <section className={styles.bg} id={id}>
       <div className={styles.container}>
-        {children}
+        <div className={styles.inner}>
+          {children}
+        </div>
       </div>
     </section>
   )
