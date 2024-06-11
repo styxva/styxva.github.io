@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { InstagramLogo, YoutubeLogo, TwitterLogo, ThreadsLogo, TiktokLogo, ArrowDown, Envelope } from "@phosphor-icons/react/dist/ssr"
+import { InstagramLogo, YoutubeLogo, TwitterLogo, ThreadsLogo, TiktokLogo, ArrowDown, Heart, Envelope } from "@phosphor-icons/react/dist/ssr"
 import Section from "@/components/section"
 import Footer from "@/components/footer"
 import Button from "@/components/button"
@@ -34,6 +34,7 @@ export default function Home() {
               </ul>
 
               <ul className={styles.buttons}>
+                <Button href="https://ko-fi.com/styxva"><Heart /> Donate</Button>
                 <Button href="#commissions"><ArrowDown /> Commissions</Button>
               </ul>
             </div>

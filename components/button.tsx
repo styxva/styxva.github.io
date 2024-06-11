@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react"
-import styles from "./button.module.css"
+import styles from "@/components/button.module.css"
 
 type Props = {
   compact?: boolean,

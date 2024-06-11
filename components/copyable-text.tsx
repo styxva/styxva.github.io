@@ -1,5 +1,5 @@
 import { Clipboard, Check } from "@phosphor-icons/react/dist/ssr"
-import Button from "./button"
+import Button from "@/components/button"
 import React, { MouseEventHandler } from "react"
 
 type Props = {
