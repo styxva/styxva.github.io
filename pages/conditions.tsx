@@ -37,7 +37,7 @@ export default function NotFound() {
         
         <p>At this point in time, I don't feel confident enough in my ability to provide scripts on any professional level, so I will not accept commissions that don't already provide a script. This might change in the future.</p>
 
-        <p>As long as you provide me with what you want me to say, I DO NOT impose any limitations. In some cases, I might have to add an NSFW or other fee.</p>
+        <p>As long as you provide me with what you want me to say, I DO NOT impose any limitations.</p>
         
         <p>I will only accept written scripts, or <strong>clear</strong> audio. I will not accept Reels, TikToks or any sort of unclear audio.</p>
 
