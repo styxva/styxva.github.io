@@ -22,13 +22,9 @@ export default function Home() {
         
         <h2>Data Collection</h2>
 
-        <h3>Website Analytics</h3>
+        <p><strong>Website Analytics:</strong> This website does not use any analytics tools.</p>
 
-        <p>This website does not use any analytics tools.</p>
-
-        <h3>Cookie Usage</h3>
-
-        <p>This website does not use any cookies</p>
+        <p><strong>Cookie Usage:</strong> This website does not use any cookies</p>
 
         <h2>Linked Services</h2>
 
