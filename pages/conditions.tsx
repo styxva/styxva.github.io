@@ -18,6 +18,10 @@ export default function NotFound() {
 
         <p>By sending me a commission request, you agree to the following conditions.</p>
 
+        <h2>Important</h2>
+
+        <p>Due to time constraints, I will only be able to take on a small number of commissions for the time being. I will definitely get back to you in a timely manner, but might have to decline, or take on the commission at a later date.</p>
+
         <h2>Languages</h2>
 
         <p>I will be doing commissions in English, Japanese and German. I can not vouch for pronunciation, which is why I will not be accepting other languages at this point.</p>
@@ -45,11 +49,11 @@ export default function NotFound() {
 
         <h2>Estimates</h2>
 
-        <p>After you have provided me a script, I will go through it, and provide you a rough estimate of the length of the audio file. Since that will only be an estimate, please do not be surprised if the true final length of the audio, and with it it's price, differs from what I initially anticipated. It most likely will not happen, but in case I am off by a sizeable amount, you can of course cancel the project. In that case, I will have to take a cancellation fee, due to effort and time already put in.</p>
+        <p>After you have provided me a script, I will go through it, and provide you a rough estimate of the length of the audio file. Since that will only be an estimate, please do not be surprised if the true final length of the audio, and with it, it's price, differs from what I initially anticipated. It most likely will not happen, but in case I am off by a sizeable amount, you can of course cancel the project. In that case, I will have to take a cancellation fee, due to effort and time already put in.</p>
 
-        <h2>Fee Schedule</h2>
+        <h2>Payment</h2>
 
-        <p>One half of the total project fee is due upon contract acceptance, with the remaining half due upon project completion. All invoices are payable within 10 days of receipt.</p>
+        <p>The project fee will be due after everything is done, and before I hand the files over to you.</p>
 
         <h2>Revisions</h2>
 
@@ -61,7 +65,7 @@ export default function NotFound() {
 
         <h2>Ownership & Copyright</h2>
 
-        <p>Once the project is over and I hand you the files; you take ownership over the files. I will keep ownership of any intermediate files, that might have exchanged hands during the project. The copyright will still reside with me. I do not permit redistribution, reselling or other forms of commercial use, unless otherwise specified in the contract.</p>
+        <p>Once the project is over and I hand you the files; you take ownership over the files. I will keep ownership of any intermediate files, that might have exchanged hands during the project. The copyright will still reside with me. I do not permit redistribution, reselling or other forms of commercial use, unless agreed otherwise.</p>
 
         <h2>Suspension & Cancellation</h2>
 

@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.intro}>
             <h1>Hi, I'm styx!</h1>
 
-            <p>I am a 22 y.o. voice artist from Celestia. I mainly do voice overs (VOs) in Japanese on my Instagram page, and stream live VO sessions and other fun stuff on my YouTube channel on Saturadays. On this page, you will find all the information regarding commissions you need!</p>
+            <p>I am a 22 y.o. voice artist from Celestia. I mainly do voice overs (VOs) in Japanese on my Instagram page, and stream live VO sessions and other fun stuff on my YouTube channel on Saturdays. On this page, you will find all the information regarding commissions you need!</p>
 
             <div className={styles.cta}>
               <ul className={styles.social}>
