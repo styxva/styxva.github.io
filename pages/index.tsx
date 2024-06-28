@@ -47,11 +47,11 @@ export default function Home() {
 
         <p>If you need an English, Japanese or German voice over, a short recorded message, or similar; I would be glad to help out! My specialty is monologues, but I am open to anything! You can find examples of my work on my Instagram page, and YouTube channel.</p>
 
-        <p>If you decide to commission me, or send a request; please use the following "Commission" button. It will open your local mail client with a pre-written form, which you can fill out. In case you don't have one installed, or the button doesn't work for you, you can also directly copy the address by clicking the button on the right.</p>
+        <p>If you decide to commission me, or send a request; please use the following "Contact" button. It will open your local mail client with a pre-written form, which you can fill out. In case you don't have one installed, or the button doesn't work for you, you can also directly copy the address by clicking the button on the right.</p>
 
         <div className={styles.contact}>
           <div className={styles.buttons}>
-            <Button href="mailto:commissions@styx-va.com"><Envelope />Commission</Button>
+            <Button href="mailto:commissions@styx-va.com"><Envelope />Contact</Button>
             <CopyableText content="commissions@styx-va.com" />
           </div>
 
