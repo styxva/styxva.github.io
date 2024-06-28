@@ -101,7 +101,7 @@ table {
   margin: 0 auto;
 }
 
-img {
+.figure {
   display: block;
   margin: 12px auto;
   max-width: 100%;

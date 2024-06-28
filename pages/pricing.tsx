@@ -46,7 +46,7 @@ export default function NotFound() {
 
         Or, if you prefer it that way, expressed as a function taking the duration in seconds as its argument and returning the price in USD:
 
-        <img src="/pricing.svg" />
+        <img src="/pricing.svg" className="figure" />
 
         <h2>Translations</h2>
 
