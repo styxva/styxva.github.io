@@ -44,7 +44,7 @@ export default function NotFound() {
           </table>
         </div>
 
-        Or, if you prefer it that way, expressed as a function taking the duration in seconds as its argument and returning the price in USD:
+        Or, if you prefer it that way, expressed as a function taking the duration in seconds as its argument, and returning the price in USD:
 
         <img src="/pricing.svg" className="figure" />
 
