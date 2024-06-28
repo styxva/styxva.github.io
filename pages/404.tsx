@@ -8,7 +8,6 @@ export default function NotFound() {
     <>
       <Head>
         <title>Page Not Found | styx</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <Section id="error">

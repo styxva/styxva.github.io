@@ -8,7 +8,6 @@ export default function NotFound() {
     <>
       <Head>
         <title>Conditions | styx</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <Section id="conditions">

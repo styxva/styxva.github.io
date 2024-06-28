@@ -96,6 +96,29 @@ h2::after {
   background: var(--color-fg-primary);
 }
 
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table td,
+table th {
+  border: 1px solid var(--color-fg-primary);
+  padding: 8px;
+  min-width: 64px;
+  text-align: center;
+}
+
+table th {
+  background: var(--color-fg-primary);
+}
+
+.overflowContainer {
+  display: block;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
 section:nth-child(even),
 footer:nth-child(even) {
   background: var(--color-bg-secondary);
@@ -107,8 +130,15 @@ footer:nth-child(even) .bgComplementary {
 }
 
 section:nth-child(even) .fgComplementary,
-footer:nth-child(even) .fgComplementary {
+footer:nth-child(even) .fgComplementary,
+section:nth-child(even) table th,
+footer:nth-child(even) table th {
   color: var(--color-bg-secondary);
+}
+
+section:nth-child(even) table th:not(:last-child),
+footer:nth-child(even) table th:not(:last-child) {
+  border-right-color: var(--color-bg-secondary);
 }
 
 section:nth-child(odd),
@@ -122,6 +152,13 @@ footer:nth-child(odd) .bgComplementary {
 }
 
 section:nth-child(odd) .fgComplementary,
-footer:nth-child(odd) .fgComplementary {
+footer:nth-child(odd) .fgComplementary,
+section:nth-child(odd) table th,
+footer:nth-child(odd) table th {
   color: var(--color-bg-primary);
+}
+
+section:nth-child(odd) table th:not(:last-child),
+footer:nth-child(odd) table th:not(:last-child) {
+  border-right-color: var(--color-bg-primary);
 }
