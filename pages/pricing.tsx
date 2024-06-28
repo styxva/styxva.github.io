@@ -44,6 +44,10 @@ export default function NotFound() {
           </table>
         </div>
 
+        Or, if you prefer it that way, expressed as a function taking the duration in seconds as its argument and returning the price in USD:
+
+        <img src="/pricing.svg" />
+
         <h2>Translations</h2>
 
         <p>In the same fashion, the translation fee will be $5 per 30 seconds of final audio time.</p>
