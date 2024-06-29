@@ -1,0 +1,23 @@
+.video img {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.video p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.video div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.video {
+  text-align: left;
+  max-width: 350px;
+}
+

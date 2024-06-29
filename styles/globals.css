@@ -168,3 +168,19 @@ section:nth-child(odd) table th:not(:last-child),
 footer:nth-child(odd) table th:not(:last-child) {
   border-right-color: var(--color-bg-primary);
 }
+
+#video-container-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#video-container-container div {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-align: center;
+}
+
