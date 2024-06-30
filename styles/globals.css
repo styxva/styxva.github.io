@@ -182,6 +182,8 @@ footer:nth-child(odd) table th:not(:last-child) {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   flex-align: center;
