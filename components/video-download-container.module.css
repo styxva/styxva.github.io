@@ -1,8 +1,7 @@
 .video img {
   width: 100%;
-  max-width: 350px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  /* margin-top: 10px; */
 }
 
 .video p {
@@ -12,12 +11,13 @@
 }
 
 .video div {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
 }
 
 .video {
   text-align: left;
-  max-width: 350px;
+  max-width: 200px;
 }
 

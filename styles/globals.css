@@ -174,11 +174,14 @@ footer:nth-child(odd) table th:not(:last-child) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 #video-container-container div {
   width: 100%;
-  margin: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   flex-align: center;

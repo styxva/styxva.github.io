@@ -14,12 +14,16 @@ export default function VideoContainer({ title, music, href }: Props) {
 
   return (
     <div className={classNames.join(' ')}>
-      <img src={path} />
+      <div>
+        <img src={path} />
+      </div>
       <div>
         <p>{title}</p>
         <p>Music: {music}</p>
       </div>
-      <Button href={href} compact>Download</Button>
+      <div>
+        <Button href={href} compact>Download</Button>
+      </div>
     </div>
   )
 }
