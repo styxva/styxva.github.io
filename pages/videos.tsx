@@ -4,17 +4,40 @@ import Footer from "@/components/footer"
 import HomeLink from "@/components/home-link"
 import VideoContainer from "@/components/video-download-container"
 
-          // <!-- <VideoContainer href="#" title="A long distance love" music="some-music" /> -->
-          // <!-- <VideoContainer href="#" title="As long as you're with me" music="test_music" /> -->
-          // <!-- <VideoContainer href="#" title="Wind, Flowers and You" music="test_music" /> -->
+import raw from "/public/video_attrs.tsx"
+
+import type { GetServerSideProps } from "next"
+
+import { read_file_and_process } from "/public/read_files.tsx"
+import type { AudioData } from "@public/read_files"
+
+// type Props = {
+//   audio_data: AudioData[]
+// }
+//
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   return {
+//     props: {
+//       audio_data: read_file_and_process("/video_attrs")
+//     },
+//   }
+// }
+//
 export default function NotFound() {
-  
-  const params = [
-    {title: "A long distance love", music: "some-music"},
-    {title: "As long as you're with me", music: "some-music"},
-    {title: "Wind, Flowers and You", music: "some-music"}
-  ]
-  
+
+  interface AudioData {
+    title: string
+    author: string
+    music_title: string
+  }
+
+  const lines = raw.split('\n')
+
+  const params: AudioData[] = lines.map(line => {
+    const [title, author, music_title] = line.split('|').map(item => item.trim())
+    return { title, author, music_title }
+  })
+
   const video_array = []
 
   for (let i = 0; i < params.length; i++) {
@@ -23,13 +46,11 @@ export default function NotFound() {
         key={i}
         href={"#"}
         title={params[i].title}
-        music={params[i].music}
+        music={params[i].music_title}
+        author={params[i].author}
       />
     )
   }
-
-  // const video_array = [{id: 1, container: VideoContainer(title="A long distance love", music="music", href="#")}]
-  // const video_array = [<VideoContainer key={1} title="title" music="music" href="href" />]
 
   return (
     <>
