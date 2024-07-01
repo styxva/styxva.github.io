@@ -8,7 +8,7 @@ import raw from "/public/video_attrs.tsx"
 
 import type { GetServerSideProps } from "next"
 
-import { read_file_and_process } from "/public/read_files.tsx"
+import { read_file_and_process } from "/read_files.tsx"
 import type { AudioData } from "@public/read_files"
 
 // type Props = {
