@@ -4,7 +4,7 @@ import Footer from "@/components/footer"
 import HomeLink from "@/components/home-link"
 import VideoContainer from "@/components/video-download-container"
 
-import raw from "/video_attrs.tsx"
+import raw from "/video_attrs.js"
 
 import type { GetServerSideProps } from "next"
 
