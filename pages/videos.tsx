@@ -60,7 +60,7 @@ export default function Videos({ audioData }: Props) {
   )
 }
 
-export async function getStaticProps(): GetStaticPropsResult<Props> {
+export function getStaticProps(): GetStaticPropsResult<Props> {
   const p = path.join(process.cwd(), "data/videos.json")
   const data = fs.readFileSync(p, "utf8")
   return {
