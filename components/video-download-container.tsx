@@ -21,7 +21,7 @@ export default function VideoContainer({ title, music, href, author }: Props) {
         <img src={path} />
       </div>
       <div className={classNamesInner.join(' ')}>
-        <p><strong>{title}</strong></p>
+        <h3>{title}</h3>
         <p>Music: {music}</p>
         <p>Author: {author}</p>
       </div>

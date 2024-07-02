@@ -4,13 +4,16 @@ import Section from "@/components/section"
 import Footer from "@/components/footer"
 import HomeLink from "@/components/home-link"
 import VideoContainer from "@/components/video-download-container"
+import Button from "@/components/button"
+import styles from "./videos.module.css"
 import fs from "fs"
 import path from "path"
 
 interface AudioData {
   title: string
   author: string
-  musicTitle: string
+  music: string
+  dlLink: string
 }
 
 interface Props {
@@ -23,9 +26,9 @@ export default function Videos({ audioData }: Props) {
      videos.push(
       <VideoContainer
         key={i}
-        href={"#"}
+        href={audioData[i].dlLink}
         title={audioData[i].title}
-        music={audioData[i].musicTitle}
+        music={audioData[i].music}
         author={audioData[i].author}
       />
     )
@@ -46,6 +49,14 @@ export default function Videos({ audioData }: Props) {
         <p>Due to licensing, I can obviously not include the background music in the download. For that reason, the name of the music I used is displayed below the images of each download, and also included in the text file. If you want to add the music to the audio, you will have to do that manually. Please understand.</p>
 
         <h2>Combined Download</h2>
+
+        <p className={styles.center}>The below button will download all files at once.</p>
+
+        <div className={styles.download}>
+          <Button href="https://dl.dropboxusercontent.com/scl/fi/6ao0rrz41kvcelvxe9oq0/June-Combined.zip?rlkey=q7kp2eztuxoe3d3dcivcb3x4d&st=a08fvot4&dl=0" compact>Download</Button>
+        </div>
+
+        <h2>Individual Downloads</h2>
 
         <div id="video-container-container">
 

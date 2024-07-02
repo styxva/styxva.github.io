@@ -24,6 +24,12 @@
   height: 600px;
 }
 
+.video h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
 .innerstuff {
   flex: 1;
   max-height: 175px;

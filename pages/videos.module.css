@@ -1,0 +1,15 @@
+.download {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.download a {
+  max-width: 200px;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.center {
+  text-align: center;
+}
