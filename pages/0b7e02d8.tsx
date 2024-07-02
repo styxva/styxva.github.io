@@ -5,7 +5,7 @@ import Footer from "@/components/footer"
 import HomeLink from "@/components/home-link"
 import VideoContainer from "@/components/video-download-container"
 import Button from "@/components/button"
-import styles from "./0b7e02d8.module.css"
+import styles from "./videos.module.css"
 import fs from "fs"
 import path from "path"
 
@@ -53,7 +53,7 @@ export default function Videos({ audioData }: Props) {
         <p className={styles.center}>The below button will download all files at once.</p>
 
         <div className={styles.download}>
-          <Button href="https://dl.dropboxusercontent.com/scl/fi/6ao0rrz41kvcelvxe9oq0/June-Combined.zip?rlkey=q7kp2eztuxoe3d3dcivcb3x4d&st=a08fvot4&dl=0" compact>Download</Button>
+          <Button href="https://dl.dropboxusercontent.com/scl/fi/6ao0rrz41kvcelvxe9oq0/June-Combined.zip?rlkey=q7kp2eztuxoe3d3dcivcb3x4d&st=a08fvot4&dl=0">Download</Button>
         </div>
 
         <h2>Individual Downloads</h2>
