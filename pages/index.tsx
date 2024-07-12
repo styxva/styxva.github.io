@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { InstagramLogo, YoutubeLogo, TwitterLogo, ThreadsLogo, TiktokLogo, ArrowDown, Heart, Envelope } from "@phosphor-icons/react/dist/ssr"
+import { InstagramLogo, YoutubeLogo, TwitterLogo, DiscordLogo, TwitchLogo, ArrowDown, Heart, Envelope } from "@phosphor-icons/react/dist/ssr"
 import Section from "@/components/section"
 import Footer from "@/components/footer"
 import Button from "@/components/button"
@@ -26,10 +26,10 @@ export default function Home() {
             <div className={styles.cta}>
               <ul className={styles.social}>
                 <Button href="https://instagram.com/styx___z" compact newTab><InstagramLogo /></Button>
+                <Button href="https://twitch.tv/styx_va" compact newTab><TwitchLogo /></Button>
                 <Button href="https://youtube.com/@styxva" compact newTab><YoutubeLogo /></Button>
                 <Button href="https://twitter.com/styxva" compact newTab><TwitterLogo /></Button>
-                <Button href="https://threads.net/@styx___z" compact newTab><ThreadsLogo /></Button>
-                <Button href="https://tiktok.com/@styx___z" compact newTab><TiktokLogo /></Button>
+                <Button href="" compact><DiscordLogo /></Button>
               </ul>
 
               <ul className={styles.buttons}>
