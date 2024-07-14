@@ -19,6 +19,8 @@
           packages = with pkgs; [
             nodejs_20
             nodePackages.typescript-language-server
+            # https://github.com/NixOS/nixpkgs/pull/319501
+            (pkgs.callPackage ./nix/vtsls.nix {})
           ];
         };
       in
