@@ -26,8 +26,11 @@ body {
 :root {
   --color-bg-primary: rgb(251, 243, 229);
   --color-bg-secondary: rgb(244, 230, 230);
+  --color-bg-highlight: rgba(152, 112, 112, 0.2);
+  --color-bg-lowlight: rgba(152, 112, 112, 0.1); /* haha */
   --color-fg-primary: rgb(24, 17, 17);
   --color-fg-secondary: rgba(24, 17, 17, 0.5);
+  --color-fg-highlight: rgb(152, 112, 112);
   --color-container-primary: rgb(255, 255, 255);
   --color-container-secondary: rgb(245, 245, 245);
   --color-accent: rgb(152, 112, 112);

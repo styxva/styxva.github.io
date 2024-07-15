@@ -1,26 +1,31 @@
 import Head from "next/head"
+import Footer from "@/components/footer"
 import Section from "@/components/section"
 import { GetStaticPropsResult, GetStaticPathsResult, GetStaticPropsContext } from "next"
 import { ParsedUrlQuery } from "querystring"
+import { Element, ElementContent } from "hast"
+import { CaretDown, CaretRight } from "@phosphor-icons/react/dist/ssr"
 import { remark } from "remark"
 import remarkHtml from "remark-html"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import remarkParse from "remark-parse"
-import { Element, ElementContent } from "hast"
+import styles from "./wiki.module.css"
 
 interface Item {
   title: string
   slug: string
   children: Item[]
+  parents: string[]
 }
 
 interface ItemWithFile {
   title: string
   slug: string
   children: ItemWithFile[]
-  path: string
+  filePath: string
+  parents: string[]
   file: matter.GrayMatterFile<string>
 }
 
@@ -35,36 +40,51 @@ interface Props {
 }
 
 export default function Wiki({ root, item, content }: Props) {
-  function printItem(i: Item) {
+  function printItem(i: Item, indentation: number) {
+    const hasChildren = i.children.length > 0
+    const expandChildren = hasChildren && (item.parents.indexOf(i.slug) != -1 || i.slug == item.slug)
+    const isActive = item.slug == i.slug
+    const paddingLeft = 24 * (indentation + 1) - 4
     return (
-      <li><a href={i.slug}>{i.title}</a> {printChildren(i)}</li>
+      <li key={i.slug}>
+        <a href={i.slug} className={isActive ? styles.activeItem : ''} style={{paddingLeft}}>
+          <span>{i.title}</span>
+          {hasChildren
+            ? (<div className={styles.disclosureIndicator}>{expandChildren ? <CaretDown /> : <CaretRight />}</div>)
+            : null}
+        </a>
+        {expandChildren ? printChildren(i, indentation + 1) : null}
+      </li>
     )
   }
-  function printChildren(i: Item) {
-    if (i.children.length == 0) { return (<></>) }
+  function printChildren(i: Item, indentation: number) {
     return (
-      <>
-        <ul>
-          {i.children.map(printItem)}
-        </ul>
-      </>
+      <ul>
+        {i.children.map(c => printItem(c, indentation))}
+      </ul>
     )
   }
 
   return (
     <>
       <Head>
-        <title>{item.title} | celestia</title>
+        <title>{item.title + " | celestia"}</title>
       </Head>
 
-      <Section id="nav">
-        {printChildren(root)}
-      </Section>
+      <div className={styles.sidebarContainer}>
+        <nav>
+          {printChildren(root, 0)}
+        </nav>
 
-      <Section id="content">
-        <h1>{item.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      </Section>
+        <main>
+          <Section id={content}>
+            <h1>{item.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </Section>
+
+          <Footer />
+        </main>
+      </div>
     </>
   )
 }
@@ -75,7 +95,7 @@ export default function Wiki({ root, item, content }: Props) {
 export function getStaticPaths(): GetStaticPathsResult<Params> {
   const items = flatten(getRoot())
   return {
-    paths: items.map(i => ({ params: { slug: i.slug } })),
+    paths: Object.values(items).map(i => ({ params: { slug: i.slug } })),
     fallback: false
   }
 }
@@ -86,7 +106,7 @@ export function getStaticPaths(): GetStaticPathsResult<Params> {
 export function getStaticProps({ params }: GetStaticPropsContext<Params>): GetStaticPropsResult<Props> {
   const root = getRoot()
   const allItems = flatten(root)
-  const item = allItems.find(i => i.slug === params!.slug)
+  const item = allItems[params!.slug]
   if (!item) {
     throw "i hate this fucking impure language so damn much"
   }
@@ -100,7 +120,7 @@ export function getStaticProps({ params }: GetStaticPropsContext<Params>): GetSt
             type: 'element',
             tagName: 'a',
             properties: {
-              href: translateURL(node.url, item.path, allItems),
+              href: translateURL(node.url, item.filePath, allItems),
             },
             children: state.all(node)
           }
@@ -127,19 +147,19 @@ export function getStaticProps({ params }: GetStaticPropsContext<Params>): GetSt
  */
 function getRoot(): ItemWithFile {
   const p = path.join(process.cwd(), "wiki")
-  return getDirectoryItem(p, "index")
+  return getDirectoryItem(p, [])
 }
 
 /**
  * Walk through a subdirectory in the /wiki directory, expecting an index.md file and possibly more children.
  */
-function getDirectoryItem(p: string, name: string): ItemWithFile {
+function getDirectoryItem(p: string, dirPath: string[]): ItemWithFile {
   const items: Record<string, ItemWithFile> = {}
   for (const fileName of fs.readdirSync(p)) {
     const childPath = path.join(p, fileName)
     const stat = fs.statSync(childPath)
     if (stat.isDirectory()) {
-      items[fileName] = getDirectoryItem(childPath, fileName)
+      items[fileName] = getDirectoryItem(childPath, [...dirPath, fileName])
     } else if (stat.isFile() && fileName.endsWith(".md")) {
       const slug = fileName.slice(0, -3)
       const fileContents = fs.readFileSync(childPath, "utf8")
@@ -152,7 +172,8 @@ function getDirectoryItem(p: string, name: string): ItemWithFile {
         title,
         file,
         slug,
-        path: childPath,
+        parents: [...dirPath],
+        filePath: childPath,
         children: [],
       }
     } else {
@@ -164,7 +185,10 @@ function getDirectoryItem(p: string, name: string): ItemWithFile {
   if (!index) {
     throw "yo, you dropped your index"
   }
-  index.slug = name;
+  if (dirPath.length > 0) {
+    index.slug = dirPath.at(-1)!
+  }
+  index.parents.pop()
   delete items["index"]
 
   const children = Object.values(items).sort((x, y) => x.title.localeCompare(y.title))
@@ -172,10 +196,19 @@ function getDirectoryItem(p: string, name: string): ItemWithFile {
   return index
 }
 
-function flatten(item: ItemWithFile): ItemWithFile[] {
-  const items = item.children?.flatMap(flatten)
-  items.push(item)
-  return items
+function flatten(item: ItemWithFile): Record<string, ItemWithFile> {
+  let result: Record<string, ItemWithFile> = {}
+  result[item.slug] = item
+  for (const child of item.children) {
+    const children = flatten(child)
+    const duplicateSlug = Object.keys(children).find(s => Object.hasOwn(result, s))
+    if (duplicateSlug) {
+      throw "duplicate slug: " + duplicateSlug
+    }
+    result = { ...result, ...children }
+  }
+
+  return result
 }
 
 /**
@@ -185,17 +218,18 @@ function removeFile(item: ItemWithFile): Item {
   return {
     title: item.title,
     slug: item.slug,
+    parents: item.parents,
     children: item.children.map(removeFile),
   }
 }
 
-function translateURL(url: string, itemPath: string, items: ItemWithFile[]): string {
+function translateURL(url: string, itemPath: string, items: Record<string, ItemWithFile>): string {
   if (url.startsWith("http://") || url.startsWith("https://")) {
     return url
   }
 
   const p = path.normalize(path.join(path.dirname(itemPath), url))
-  const item = items.find(i => i.path == p)
+  const item = Object.values(items).find(i => i.filePath == p)
   if (!item) {
     throw "unresolved url: " + p
   }
