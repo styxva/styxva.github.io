@@ -10,7 +10,7 @@ export default function NotFound() {
         <title>Conditions | styx</title>
       </Head>
 
-      <Section id="conditions">
+      <Section id="conditions" isCentered>
         <HomeLink />
 
         <h1>Conditions</h1>

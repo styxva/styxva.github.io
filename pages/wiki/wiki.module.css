@@ -54,3 +54,34 @@
   background: var(--color-bg-highlight);
   border-left: 4px solid var(--color-fg-highlight);
 }
+
+.title {
+  line-height: 54px;
+  margin: 48px 0;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+nav .title h1 {
+  font-size: 32px;
+}
+
+nav .title a {
+  text-decoration: none;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  text-align: left;
+}
+
+.content h2::after {
+  left: 0;
+  transform: none;
+}

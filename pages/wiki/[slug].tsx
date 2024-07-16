@@ -73,13 +73,22 @@ export default function Wiki({ root, item, content }: Props) {
 
       <div className={styles.sidebarContainer}>
         <nav>
-          {printChildren(root, 0)}
+          <div className={styles.title}>
+            <h1><a href="index">celestia</a></h1>
+          </div>
+
+          <div>
+            {printChildren(root, 0)}
+          </div>
         </nav>
 
         <main>
           <Section id={content}>
-            <h1>{item.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div className={styles.title}>
+              <h1>{item.title}</h1>
+            </div>
+
+            <div className={styles.content} dangerouslySetInnerHTML={{ __html: content }} />
           </Section>
 
           <Footer />
