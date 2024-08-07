@@ -10,7 +10,7 @@ export default function Home() {
         <title>Privacy Policy | styx</title>
       </Head>
 
-      <Section id="privacy-policy">
+      <Section id="privacy-policy" isCentered>
         <HomeLink />
 
         <h1>Privacy Policy</h1>

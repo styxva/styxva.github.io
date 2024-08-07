@@ -10,7 +10,7 @@ export default function NotFound() {
         <title>Page Not Found | styx</title>
       </Head>
 
-      <Section id="error">
+      <Section id="error" isCentered>
         <HomeLink />
 
         <h1>Page Not Found</h1>

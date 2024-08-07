@@ -14,7 +14,7 @@ export default function Home() {
         <title>styx</title>
       </Head>
 
-      <Section id="landing-page">
+      <Section id="landing-page" isCentered>
         <div className={styles.landingPage}>
           <ProfilePicture size={170} border={5} inset={3} />
 
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="commissions">
+      <Section id="commissions" isCentered>
         <h1>Open for Commissions</h1>
 
         <p>If you need an English, Japanese or German voice over, a short recorded message, or similar; I would be glad to help out! My specialty is monologues, but I am open to anything! You can find examples of my work on my Instagram page, and YouTube channel.</p>
