@@ -46,6 +46,10 @@ export default function NotFound() {
 
         <p>I do not impose a limit on length.</p>
 
+        <h2>Videos</h2>
+
+        <p>I can also turn the voice over into a video, similar to the ones you can find on my Instagram Page. I will not be able to provide any background music or images, since I don't hold any copyright to such. In case you do have music, and/or an image/video you do hold the copyright over; I can of course embed them into the video if you want. If for whatever reason it turns out you didn't have the copyright to the music/image/video you provided, you will be liable.</p>
+
         <h2>Estimates</h2>
 
         <p>After you have provided me a script, I will go through it, and provide you a rough estimate of the length of the audio file. Since that will only be an estimate, please do not be surprised if the true final length of the audio, and with it, it's price, differs from what I initially anticipated. It most likely will not happen, but in case I am off by a sizeable amount, you can of course cancel the project. In that case, I will have to take a cancellation fee, due to effort and time already put in.</p>

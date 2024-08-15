@@ -50,7 +50,11 @@ export default function NotFound() {
 
         <h2>Translations</h2>
 
-        <p>In the same fashion, the translation fee will be $5 per 30 seconds of final audio time.</p>
+        <p>In the same fashion, the translation fee will be $5 per 30 seconds of final audio time. (This equates to a 30% increase from the base price.)</p>
+
+        <h2>Videos</h2>
+
+        <p>The video fee will be $5 per 30 seconds of final audio time. (This equates to a 30% increase from the base price.)</p>
 
         <h2>Cancellation Fee</h2>
 
