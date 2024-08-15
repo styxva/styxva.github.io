@@ -50,7 +50,7 @@ export default function Home() {
 
         <div className={styles.contact}>
           <div className={styles.buttons}>
-            <Button href="mailto:commissions@styx-va.com"><Envelope />Contact</Button>
+            <Button href="mailto:commissions@styx-va.com?subject=Commission&body=Your%20Script:%0D%0A[Insert%20your%20script%20here.%20I%20only%20accept%20Japanese/English/German]%0D%0A%0D%0ADo%20you%20need%20a%20translation%3F%20Yes/No%0D%0A%0D%0AIf%20you%20do%20need%20a%20translation%3B%20choose%20a%20language%20I%20should%20translate%20it%20to%3A%0D%0AGerman/English/Japanese%0D%0A%0D%0ADo%20you%20need%20a%20video%3F%20Yes/No%0D%0A%0D%0ADo%20you%20have%20background%20music%20you%20want%20me%20to%20use%3F%20Yes/No/NA%0D%0A[If%20you%20do,%20please%20add%20it%20as%20an%20attachment]%0D%0A%0D%0ADo%20you%20have%20a%20background%20image%20you%20want%20me%20to%20use%3F%20Yes/No/NA%0D%0A[If%20you%20do,%20please%20add%20it%20as%20an%20attachment]"><Envelope />Contact</Button>
             <CopyableText content="commissions@styx-va.com" />
           </div>
 
