@@ -235,15 +235,18 @@ function removeFile(item: ItemWithFile): Item {
 }
 
 function translateURL(url: string, itemPath: string, items: Record<string, ItemWithFile>): string {
-  if (url.startsWith("http://") || url.startsWith("https://")) {
+  if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("#")) {
     return url
   }
 
-  const p = path.normalize(path.join(path.dirname(itemPath), url))
+  const fullP = path.normalize(path.join(path.dirname(itemPath), url))
+  const components = fullP.split("#", 2)
+  const p = components[0]
   const item = Object.values(items).find(i => i.filePath == p)
   if (!item) {
     throw "unresolved url: " + p
   }
+  components[0] = item.slug
 
-  return item.slug
+  return components.join("#")
 }
