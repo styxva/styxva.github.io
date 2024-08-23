@@ -57,6 +57,8 @@ a {
   transition: text-underline-offset 0.1s;
   color: inherit;
   outline: none;
+  z-index: 100;
+  position: relative;
 }
 
 a:hover {
@@ -73,7 +75,8 @@ h6 {
   font-weight: 700;
   text-align: center;
   margin-bottom: 12px;
-  margin-top: 24px;
+  margin-top: -64px;
+  padding-top: 64px;
 }
 
 h1 {
@@ -194,4 +197,3 @@ footer:nth-child(odd) table th:not(:last-child) {
   flex-align: center;
   /* justify-content: center; */
 }
-

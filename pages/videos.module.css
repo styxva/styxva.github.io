@@ -1,3 +1,7 @@
+.downloadContainer {
+  margin-bottom: 24px;
+}
+
 .download {
   display: flex;
   width: 100%;

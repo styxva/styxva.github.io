@@ -52,8 +52,10 @@ export default function Videos({ audioData }: Props) {
 
         <p className={styles.center}>The below button will download all files at once.</p>
 
-        <div className={styles.download}>
-          <Button href="https://dl.dropboxusercontent.com/scl/fi/dsjg0r29ca5np1o23u8d1/July-Combined.zip?rlkey=yeqh5jqeclzjk28otoxpjxwh7&st=g6jeuewm&dl=0">Download</Button>
+        <div className={styles.downloadContainer}>
+          <div className={styles.download}>
+            <Button href="https://dl.dropboxusercontent.com/scl/fi/dsjg0r29ca5np1o23u8d1/July-Combined.zip?rlkey=yeqh5jqeclzjk28otoxpjxwh7&st=g6jeuewm&dl=0">Download</Button>
+          </div>
         </div>
 
         <h2>Individual Downloads</h2>
