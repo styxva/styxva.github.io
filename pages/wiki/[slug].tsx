@@ -70,6 +70,7 @@ export default function Wiki({ root, item, content }: Props) {
     <>
       <Head>
         <title>{item.title + " | celestia"}</title>
+        <meta name="theme-color" content="rgb(24, 17, 17)" />
       </Head>
 
       <div className={styles.sidebarContainer}>
