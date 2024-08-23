@@ -40,7 +40,7 @@ export default function Videos({ audioData }: Props) {
         <title>Videos | styx</title>
       </Head>
 
-      <Section id="videos">
+      <Section id="videos" isCentered>
         <HomeLink />
 
         <h2>Video Downloads</h2>
