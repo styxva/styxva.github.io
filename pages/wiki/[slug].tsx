@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Footer from "@/components/footer"
 import Section from "@/components/section"
+import MenuToggle from "@/components/menu-toggle"
 import { GetStaticPropsResult, GetStaticPathsResult, GetStaticPropsContext } from "next"
 import { ParsedUrlQuery } from "querystring"
 import { Element, ElementContent } from "hast"
@@ -73,20 +74,20 @@ export default function Wiki({ root, item, content }: Props) {
 
       <div className={styles.sidebarContainer}>
         <nav>
-          <div className={styles.title}>
+          <header>
             <h1><a href="index">celestia</a></h1>
-          </div>
+          </header>
 
-          <div>
+          <MenuToggle id="menuToggle" menuClass={styles.menu}>
             {printChildren(root, 0)}
-          </div>
+          </MenuToggle>
         </nav>
 
         <main>
           <Section id={content}>
-            <div className={styles.title}>
+            <header>
               <h1>{item.title}</h1>
-            </div>
+            </header>
 
             <div className={styles.content} dangerouslySetInnerHTML={{ __html: content }} />
           </Section>

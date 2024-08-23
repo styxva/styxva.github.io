@@ -1,0 +1,63 @@
+.check {
+  display: none;
+}
+
+.label {
+  padding: 14px 4px;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+}
+
+.icon {
+  height: 2px;
+  width: 24px;
+  border-radius: 2px;
+  background-color: var(--color-bg-primary);
+  position: relative;
+  display: block;
+  transition: all .2s ease-in-out;
+}
+
+.icon::before {
+  top: -8px;
+  visibility: visible;
+}
+
+.icon::after {
+  top: 8px;
+}
+
+.icon::before,
+.icon::after {
+  height: 2px;
+  width: 24px;
+  border-radius: 2px;
+  background-color: var(--color-bg-primary);
+  position: absolute;
+  content: "";
+  transition: all .2s ease-in-out;
+}
+
+.check:checked ~ label .icon {
+  background: transparent;
+}
+
+.check:checked ~ label .icon::before {
+  transform: translate(0, 8.19px) rotate(45deg);
+  opacity: 1;
+}
+
+.check:checked ~ label .icon::after {
+  transform: translate(0, -8.19px) rotate(-45deg);
+}
+
+@media(max-width: 900px) {
+  .menu {
+    display: none;
+  }
+
+  .check:checked ~ .menu {
+    display: block;
+  }
+}
