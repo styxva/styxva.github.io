@@ -12,6 +12,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import remarkParse from "remark-parse"
+import remarkHeadingId from "remark-heading-id"
 import styles from "./wiki.module.css"
 
 interface Item {
@@ -145,6 +146,9 @@ export function getStaticProps({ params }: GetStaticPropsContext<Params>): GetSt
         }
       }
     })
+    .use(remarkHeadingId, {
+      defaults: true,
+    })
     .processSync(item.file.content)
     .toString()
   return { props: { root: removeFile(root), item: removeFile(item), content } }
@@ -235,7 +239,10 @@ function removeFile(item: ItemWithFile): Item {
 }
 
 function translateURL(url: string, itemPath: string, items: Record<string, ItemWithFile>): string {
-  if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("#")) {
+  if (url.startsWith("#")) {
+    return "#user-content-" + url.substr(1)
+  }
+  if (url.startsWith("http://") || url.startsWith("https://")) {
     return url
   }
 
@@ -247,6 +254,9 @@ function translateURL(url: string, itemPath: string, items: Record<string, ItemW
     throw "unresolved url: " + p
   }
   components[0] = item.slug
+  if (components.length > 1) {
+    components[1] = "user-content-" + components[1]
+  }
 
   return components.join("#")
 }
