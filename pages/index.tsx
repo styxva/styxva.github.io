@@ -26,10 +26,8 @@ export default function Home() {
             <div className={styles.cta}>
               <ul className={styles.social}>
                 <Button href="https://instagram.com/styx___z" compact newTab><InstagramLogo /></Button>
-                <Button href="https://twitch.tv/styx_va" compact newTab><TwitchLogo /></Button>
                 <Button href="https://youtube.com/@styxva" compact newTab><YoutubeLogo /></Button>
                 <Button href="https://twitter.com/styxva" compact newTab><TwitterLogo /></Button>
-                <Button href="" compact><DiscordLogo /></Button>
               </ul>
 
               <ul className={styles.buttons}>
