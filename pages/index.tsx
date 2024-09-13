@@ -26,12 +26,12 @@ export default function Home() {
             <div className={styles.cta}>
               <ul className={styles.social}>
                 <Button href="https://instagram.com/styx_va" compact newTab><InstagramLogo /></Button>
-                <Button href="https://youtube.com/@styxva" compact newTab><YoutubeLogo /></Button>
-                <Button href="https://twitter.com/styxva" compact newTab><TwitterLogo /></Button>
+                <Button href="https://youtube.com/@styx_va" compact newTab><YoutubeLogo /></Button>
+                <Button href="https://twitter.com/styx_va" compact newTab><TwitterLogo /></Button>
               </ul>
 
               <ul className={styles.buttons}>
-                <Button href="https://ko-fi.com/styxva" newTab><Heart /> Donate</Button>
+                <Button href="https://ko-fi.com/styx_va" newTab><Heart /> Donate</Button>
               </ul>
             </div>
           </div>
