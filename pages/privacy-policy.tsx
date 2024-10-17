@@ -40,16 +40,14 @@ export default function Home() {
             Twitch (Papa Bezos): <a href="https://www.twitch.tv/p/en/legal/terms-of-service" target="_blank">TOS</a>, <a href="https://www.twitch.tv/p/en/legal/privacy-notice/" target="_blank">Privacy Policy</a>
           </li>
           <li>
-            Instagram (Meta): <a href="https://help.instagram.com/581066165581870" target="_blank">TOS</a>, <a href="https://privacycenter.instagram.com/policy" target="_blank">Privacy Policy</a>
-          </li>
-          <li>
-            Threads (Meta): <a href="https://help.instagram.com/769983657850450" target="_blank">TOS</a>, <a href="https://privacycenter.instagram.com/policy" target="_blank">Privacy Policy</a>
+            Instagram (Papa Zuck): <a href="https://help.instagram.com/581066165581870" target="_blank">TOS</a>, <a href="https://privacycenter.instagram.com/policy" target="_blank">Privacy Policy</a>
           </li>
           <li>
             Twitter (Papa Elon): <a href="https://x.com/en/tos" target="_blank">TOS</a>, <a href="https://x.com/en/privacy" target="_blank">Privacy Policy</a>
           </li>
           <li>
             Discord: <a href="https://discord.com/terms" target="_blank">TOS</a>, <a href="https://discord.com/privacy" target="_blank">Privacy Policy</a>
+          </li>
         </ul>
 
       </Section>
