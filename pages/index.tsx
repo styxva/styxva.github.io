@@ -21,13 +21,15 @@ export default function Home() {
           <div className={styles.intro}>
             <h1>Hi, I'm styx!</h1>
 
-            <p>I am a 22 y.o. voice artist from Celestia. I mainly do voice overs (VOs) in Japanese on my Instagram page, and stream live VO sessions and other fun stuff on my YouTube channel on Saturdays.</p>
+            <p>I am a 23 y.o. voice artist from Celestia. I mainly do voice overs (VOs) in Japanese on my Instagram page, and stream live VO sessions and other fun stuff on my Twitch channel on Tuesdays and Fridays.</p>
 
             <div className={styles.cta}>
               <ul className={styles.social}>
-                <Button href="https://instagram.com/styx_va" compact newTab><InstagramLogo /></Button>
+                <Button href="https://twitch.tv/styx_va" compact newTab><TwitchLogo /></Button>
                 <Button href="https://youtube.com/@styx_va" compact newTab><YoutubeLogo /></Button>
                 <Button href="https://twitter.com/styx_va" compact newTab><TwitterLogo /></Button>
+                <Button href="https://instagram.com/styx_va" compact newTab><InstagramLogo /></Button>
+                <Button href="https://discord.gg/J69Nx4P8e4" compact newTab><DiscordLogo /></Button>
               </ul>
 
               <ul className={styles.buttons}>

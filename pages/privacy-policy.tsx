@@ -48,6 +48,8 @@ export default function Home() {
           <li>
             Twitter (Papa Elon): <a href="https://x.com/en/tos" target="_blank">TOS</a>, <a href="https://x.com/en/privacy" target="_blank">Privacy Policy</a>
           </li>
+          <li>
+            Discord: <a href="https://discord.com/terms" target="_blank">TOS</a>, <a href="https://discord.com/privacy" target="_blank">Privacy Policy</a>
         </ul>
 
       </Section>
