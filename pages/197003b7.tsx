@@ -45,8 +45,7 @@ export default function Videos({ audioData }: Props) {
 
         <h2>Video Downloads</h2>
 
-        <p>On this page, you will find the downloads for all audio data of my videos of the last month. You can either pick and choose, or you can download it all at once. When you click on download, you will get a .zip file, which contains the audio data in wav and mp3 format, as well as a text file containing the script in Japanese, English and Romaji (phonetics for the Japanese).</p>
-        <p>Due to licensing, I can obviously not include the background music in the download. For that reason, the name of the music I used is displayed below the images of each download, and also included in the text file. If you want to add the music to the audio, you will have to do that manually. Please understand.</p>
+        <p>On this page, you will find the downloads for all audio data of my videos of the last month. You can either pick and choose, or you can download it all at once. When you click on download, you will get a .zip file, which contains the audio data (clean, and with background music) in wav and mp3 format, as well as a text file containing the script in Japanese, English and Romaji (phonetics for the Japanese). It also includes the thumbnail and the actual video.</p>
 
         <h2>Combined Download</h2>
 
@@ -54,7 +53,7 @@ export default function Videos({ audioData }: Props) {
 
         <div className={styles.downloadContainer}>
           <div className={styles.download}>
-            <Button href="https://dl.dropboxusercontent.com/scl/fi/nh3leg441wvjrek81z70b/September.zip?rlkey=qg9ka06jqns2udh1cc4ke7q8o&dl=0">Download</Button>
+            <Button href="https://dl.dropboxusercontent.com/scl/fi/urk39fujgnix1lbbn2l21/October.zip?rlkey=t9zksu12d4k7y2od8dfjoyfd7&dl=0">Download</Button>
           </div>
         </div>
 
