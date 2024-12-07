@@ -53,7 +53,7 @@ export default function Videos({ audioData }: Props) {
 
         <div className={styles.downloadContainer}>
           <div className={styles.download}>
-            <Button href="https://dl.dropboxusercontent.com/scl/fi/urk39fujgnix1lbbn2l21/October.zip?rlkey=t9zksu12d4k7y2od8dfjoyfd7&dl=0">Download</Button>
+            <Button href="https://dl.dropboxusercontent.com/scl/fi/d7qil2lz22pa9omlkzo54/November.zip?rlkey=c75qbfhxxttn1n827nudodf3a&dl=0">Download</Button>
           </div>
         </div>
 
